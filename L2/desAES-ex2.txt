@@ -1,0 +1,51 @@
+Ex2
+
+Thread nr 12 started
+Thread nr 3 started
+Thread nr 8 started
+Thread nr 6 started
+Thread nr 1 started
+Thread nr 9 started
+Thread nr 13 started
+Thread nr 4 started
+Thread nr 11 started
+Thread nr 11 current first char: b
+Thread nr 5 started
+Thread nr 2 started
+Thread nr 7 started
+Thread nr 10 started
+Thread nr 0 started
+Thread nr 14 started
+Thread nr 0 current first char: 0
+Thread nr 10 current first char: a
+Thread nr 7 current first char: 7
+Thread nr 2 current first char: 2
+Thread nr 5 current first char: 5
+Thread nr 4 current first char: 4
+Thread nr 13 current first char: d
+Thread nr 9 current first char: 9
+Thread nr 1 current first char: 1
+Thread nr 6 current first char: 6
+Thread nr 8 current first char: 8
+Thread nr 3 current first char: 3
+Thread nr 12 current first char: c
+Thread nr 15 started
+Thread nr 14 current first char: e
+Thread nr 15 current first char: f
+
+Done: 1/16 - 1
+Done: 2/16 - 2
+Done: 3/16 - 3
+Done: 4/16 - 4
+Done: 5/16 - 5
+Done: 6/16 - 6
+Done: 7/16 - 7
+Done: 8/16 - 8
+Done: 9/16 - 9
+Done: 10/16 - a
+Done: 11/16 - b
+Done: 12/16 - c
+
+S l y n n a   " G e s i a r k a "   o d n a l e z i o n a .   K t o s   w z i a l   w   j e j   i m i e n i u   2 0   m l n   e u r o   d o t a c j i   r o l n e j   n a   P o d k a r p a c i 
+
+found for key: 4d34af60b92c6224d8cde48525ef7e8710fcf25e315b0a0ef027976142d39a93
