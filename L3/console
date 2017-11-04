@@ -1,0 +1,7 @@
+console test
+---------------------------------------------------------------------------------------------------------
+openssl genrsa -des3 -out privkeyA.pem 2048
+openssl req -new -key privkeyA.key -out certA.csr
+openssl genrsa -des3 -out privkeyA.pem 2048
+openssl req -new -x509 -key privkeyA.pem -out CAcert.crt -days 365
+openssl x509 -req -days 365 -in certA.csr -CA CAcert.crt -CAkey privkeyA.pem -set_serial 01 -out certA.crt
