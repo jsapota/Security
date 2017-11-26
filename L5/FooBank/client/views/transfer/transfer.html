@@ -1,0 +1,100 @@
+<template name="transfer">
+  <div class="container">
+    <div class="row">
+      <div class="col-sm-6 col-sm-offset-3 formBox">
+        {{#if stageOne}}
+          <div class="row formSubBox">
+            <div class="col-sm-12">
+              <h4>From account</h4>
+            </div>
+            <div class="col-sm-4">
+              <label>Account number</label>
+            </div>
+            <div class="col-sm-8">
+              <p class="numberP">42 1234 1234 1234 1234 1234 1234</p>
+            </div>
+            <div class="col-sm-12">
+              <h4>The recipient's details</h4>
+            </div>
+            <form onsubmit="return false">
+              <div class="col-sm-4">
+                <label>Name: </label>
+              </div>
+              <div class="col-sm-8">
+                <input id="recName" name="recName2" type="text" pattern=".{3,}" title="3 characters minimum" required>
+              </div>
+              <div class="col-sm-4">
+                <label>Account number: </label>
+              </div>
+              <div class="col-sm-8">
+                <input id="recNumber" name="recNumber2" type="number" pattern="/([^\d]*\d){8,}/" title="20 characters minimum" required>
+              </div>
+              <div class="col-sm-4">
+                <label>Amount of money: </label>
+              </div>
+              <div class="col-sm-4">
+                <input id="amount" name="amount2" type="number" min="1" step="1" pattern="^[0-9]"
+                       title="1 character minimum" oninput="this.value = this.value.replace(/\W+/g, '*')" required>
+              </div>
+              <div class="col-sm-4">
+                <input id="amountPartial" name="amountPartial2" type="number" min="0" step="1"
+                       pattern="^[0-9]" title="1 character minimum"
+                       oninput="this.value = this.value.replace(/\W+/g, '*'); this.value = this.value.replace(/^[0-9]{3}$/)" required>
+              </div>
+              <div class="col-sm-4 col-sm-offset-8">
+                <button id="confirmButton" class="btn btn-primary btn-block btn-lg">Send</button>
+              </div>
+            </form>
+          </div>
+        {{else}}
+          <div class="row formSubBox">
+            {{#if stageTwo}}
+            <div class="col-sm-12">
+              <h4>From account</h4>
+            </div>
+            <div class="col-sm-4">
+              <label>Account number</label>
+            </div>
+            <div class="col-sm-8">
+              <p class="numberP">42 1234 1234 1234 1234 1234 1234</p>
+            </div>
+            <div class="col-sm-12">
+              <h4>The recipient's details</h4>
+            </div>
+            <div class="col-sm-4">
+              <label>Name: </label>
+            </div>
+            <div class="col-sm-8" id="numberBox">
+              <textarea class="conText" id="nameField" value="{{recName}}" readonly rows=1></textarea>
+            </div>
+            <div class="col-sm-4" id="accountBox">
+              <label>Account number: </label>
+            </div>
+            <div class="col-sm-8">
+              <textarea class="conText" id="numberField" value="{{recNumber}}" readonly rows=1></textarea>
+            </div>
+            <div class="col-sm-4">
+              <label>Amount of money: </label>
+            </div>
+            <div class="col-sm-8" id="moneyBox">
+              <textarea class="conText" id="amountField" value="{{recAmount}}" readonly rows=1></textarea>
+            </div>
+            <div class="col-sm-4 col-sm-offset-4">
+              <button id="back" class="btn btn-primary btn-block btn-lg">Back</button>
+            </div>
+            <div class="col-sm-4">
+              <button id="confirmSendButton" class="btn btn-primary btn-block btn-lg">Send</button>
+            </div>
+            {{else}}
+              <div class="col-sm-8 col-sm-offset-2 transferComplete">
+                <p class="title">Transfer complete</p>
+                <p>{{recAmount}} $ sent to {{recName}}</p>
+                <p>Acc - {{recNumber}}</p>
+              </div>
+            {{/if}}
+          </div>
+        {{/if}}
+      </div>
+    </div>
+  </div>
+</template>

@@ -1,0 +1,10 @@
+<template name="history">
+  <div class="row tableHeader ">
+    <div class="col-sm-4"><h2>Recipient</h2></div>
+    <div class="col-sm-4"><h2>Amount</h2></div>
+    <div class="col-sm-4"><h2>Date</h2></div>
+  </div>
+  {{#each history}}
+    {{> row}}
+  {{/each}}
+</template>
